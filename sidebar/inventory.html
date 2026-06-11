@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' href='../css/style.css'>
+        <title>Inventory</title>
+    </head>
+    <body>
+        <div class="container">
+
+    <aside class="sidebar">
+        <h2 onclick='gotohome()'>Pharmacy</h2>
+
+        <ul id='sidebarlist'>
+            <li><a href='dashboard.html'>Dashboard</a></li>
+            <li><a href='sales.html'>Sales</a></li>
+            <li><a href='inventory.html'>Inventory</a></li>
+            <li><a href='purchase.html'>Purchases</a></li>
+            <li><a href='reports.html'>Reports</a></li>
+        </ul>
+    </aside>
+
+    <main class="inventory_content">
+        <table>
+            <tr>
+                <th>Drug</th>
+                <th>Stock</th>
+                <th>Price</th>
+            </tr>
+
+            <tr>
+                <td>Paracetamol</td>
+                <td>200</td>
+                <td>500</td>
+            </tr>
+        </table>
+        <button>Add Drug</button>
+    </main>
+
+</div>
+
+<script src='../js/app.js'></script>
+    </body>
+</html>
