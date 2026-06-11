@@ -39,32 +39,33 @@
         <link rel='stylesheet' href='css/style.css'>
     </head>
     <body>
-        <div class="container">
+        <div class="body">
+            <nav class="nav-container">
+                <h2 onclick='gotoself()'>Pharmacy</h2>
 
-    <nav class="sidebar">
-        <h2 onclick='gotoself()'>Pharmacy</h2>
+                <ul id='nav-list'>
+                    <li onclick='gotohome()'>Dashboard</li>
+                    <li onclick='gotosales()'>Sales</li>
+                    <li onclick='gotoinventory()' >Inventory</li>
+                    <li onclick='gotopurchase()'>Purchases</li>
+                    <li onclick='gotoreports()'>Reports</li>
+                </ul>
+            </nav>
+      
 
-        <ul id='sidebarlist'>
-            <li onclick='gotohome()'>Dashboard</li>
-            <li onclick='gotosales()'>Sales</li>
-            <li onclick='gotoinventory()' >Inventory</li>
-            <li onclick='gotopurchase()'>Purchases</li>
-            <li onclick='gotoreports()'>Reports</li>
-        </ul>
-    </nav>
+            <main class="main-page" id='main-page'>
+                <header class='main-header'>
+                    <p>navMin</p>
+                    <p>Hello User</p>
+                </header>
 
-    <main class="mainpage" id='mainpage'>
-        <header>
-            <p></p>
-            <p></p>
-        </header>
-        <div class='content' id='content'>
+                <div class='main-content' id='main-content'>
+                    
+                </div>
             
-        </div>
-    
-    </main>
+            </main>
 
-</div>
+        </div>
 <script src='./js/app.js'></script>
     </body>
 </html>
