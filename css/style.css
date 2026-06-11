@@ -34,11 +34,14 @@
     border-bottom:1px solid white;
     border-radius:0 0 10px 10px;
     font-weight:bold;
+    color:white;
+    text-align:center;
+    cursor: pointer;
+    user-select:none;
 }
 
 #sidebarlist a:visited, #sidebarlist a:link{
-    color:white;
-    text-align:center;
+    
     display:block;
     text-decoration:none;
 }
@@ -48,20 +51,20 @@
     padding:20px;
 }
 
-.inventory_content{
+.inventory{
     padding:1rem;
 }
 
-.inventory_content table, .inventory_content td, .inventory_content th{
+.inventory table, .inventory td, .inventory th{
     border:1px solid black;
     border-collapse:collapse;    
 }
 
-.inventory_content td, .inventory_content th{
+.inventory td, .inventory th{
     padding:0.5rem;
 }
 
-.inventory_content th{
+.inventory th{
     padding:0.5rem;
     border:2px solid black;
 }
