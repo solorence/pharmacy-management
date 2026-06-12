@@ -24,9 +24,3 @@ function gotopurchase(){
 function gotoreports(){
 	fetch('sidebar/reports.html').then(res=>res.text()).then(html=>document.getElementById('main-content').innerHTML = html)
 }
-
-
-function gotoself(){
-	window.location.href='index.html'	
-}
-console.log('test cache! hope it works well now')
