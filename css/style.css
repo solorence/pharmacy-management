@@ -166,6 +166,23 @@
     background-color:var(--low-stock);
 }
 
+.dashboard .section1 .card-footer {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0.3rem;    
+}
+
+.dashboard .section1 .card-footer a{
+    
+}
+
+.dashboard .section1 .card-footer svg{
+    width:4%;
+    height:100%;
+}
+
+
 
 /********************************************************************/
 
