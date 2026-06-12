@@ -4,8 +4,18 @@
     box-sizing:border-box;
 }
 
+:root{
+    --line-color:#B1D9B2;
+    --button-color:#C7E3BF;
+    --available:#0D6EFD;
+    --sales:#188754;
+    --low-stock: #FEC107;
+}
+
+
 .body{
     display:flex;
+    font-family:sans-serif;
 }
 
 .nav-container{
@@ -19,7 +29,7 @@
 
 
 .nav-container h2{
-    font-family:roboto, sans-serif;
+    font-family:sans-serif;
     text-align:center;
     padding:0.5rem 0;
     cursor:pointer;
@@ -44,7 +54,7 @@
 }
 
 .main-page{
-    background-color:;
+    background-color:#EAF4E9;
     flex:1;
 }
 
@@ -53,16 +63,72 @@
     justify-content:space-between;
     padding:2rem 1rem;
     background:white;
-    border-bottom:1px solid #0a0a0a;
 }
 
 
 .main-content{
-    
+    padding:1rem;    
 }
 
 
 
+/****************DASHBOARD RELATED PAGE *****************************/
+
+.dashboard-header{
+    padding:1rem 1rem 0.5rem 0;
+    border-bottom:1px solid var(--line-color);
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.dashboard-header span{
+    border:2px solid var(--line-color);
+    padding:0.3rem;
+    text-align:center;
+    font-size:0.9rem;
+    border-radius:3px;
+    background-color:var(--button-color);
+    cursor:pointer;
+}
+
+.dashboard .section1 {
+    display: flex;
+    gap:2%;
+    height:25vh;
+    padding:1rem 0;
+}
+
+.dashboard .section1 .card{
+    flex:1;
+    border-radius:5px;
+}
+
+.dashboard .section1 .card .card-body{
+    display: flex;
+    height:80%;
+    border-bottom:1px solid #606062;
+}
+
+.dashboard .section1 .total-medicine{
+    background-color:var(--available);
+    color:white;
+}
+
+.dashboard .section1 .total-sales{
+    background-color:var(--sales);
+    color:white;
+}
+
+.dashboard .section1 .low-stock{
+    background-color:var(--low-stock);
+}
+
+
+/********************************************************************/
+
+
+/************************INVENTORY RELATED PAGE**********************/
 .inventory{
     padding:1rem;
 }
@@ -80,3 +146,5 @@
     padding:0.5rem;
     border:2px solid black;
 }
+
+/*********************************************************************/
