@@ -79,8 +79,10 @@
 }
 
 .minimize-icon-space{
-    width:4vw;
-    height:4vw;
+    /*width:4vw;
+    height:4vw;*/
+    width: clamp(50px, 2.5vw, 100px);
+    height: clamp(50px, 2.5vw, 100px);
     border-radius:50%;
     display:flex;
     align-item:center;
