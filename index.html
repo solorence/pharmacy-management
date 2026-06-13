@@ -7,10 +7,10 @@
     </head>
     <body>
         <div class="body">
-            <nav class="nav-container">
+            <nav class="nav-container" id='nav-container'>
                 <h2 onclick='gotohome()'>Pharmacy</h2>
 
-                <ul id='nav-list'>
+                <ul id='nav-list1'>
                     <li onclick='gotohome()'>Dashboard</li>
                     <li onclick='gotosales()'>Sales</li>
                     <li onclick='gotoinventory()' >Inventory</li>
@@ -22,7 +22,7 @@
 
             <main class="main-page" id='main-page'>
                 <header class='main-header'>
-                    <div class='minimize-icon-space'>
+                    <div onclick='togglenav()' class='minimize-icon-space'>
                         <svg  class='minimize-icon' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 
                             <g id="Complete">
