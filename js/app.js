@@ -19,7 +19,7 @@ function winload(){
 }
 
 
-function logoclicked(event){
+function logoclicked(){
 	console.log(event.target.id);
 	if (event.target.id == 'logonav1'){
 		fetch('sidebar/dashboard.html', {cache:'no-store'}).then(res=> res.text()).then(html=>main_c.innerHTML = html);
@@ -80,13 +80,26 @@ function gotoreports(event){
 }
 
 function togglenav(){
-	main_nav_active ? loadnav2() : loadnav1();
+	main_nav_active ? loadnav2().then(activestatenav2):loadnav1().then(activestatenav1);
+}
+
+function activestatenav1(){
+	let now_active = document.getElementById(new_active_page.id);
+	now_active.style.backgroundColor='#84FF6F';
+	now_active.style.color = 'black';
+}
+
+function activestatenav2(){
+	console.log('new active in nav2 is '+new_active_page.id);
+	let now_active = document.getElementById(new_active_page.id);
+	console.log('now active in nav2 is '+now_active.id);
+	now_active.style.backgroundColor='red';
 }
 
 
 function loadnav1(){
 	return fetch('sidebar/navlist1.html').then(res=>res.text())
-	.then(html=>{document.getElementById('nav-container').innerHTML = html
+	.then(html=>{document.getElementById('nav-container').innerHTML = html;
 				resizenav1();
 				main_nav_active=true;
 				}
@@ -94,8 +107,7 @@ function loadnav1(){
 }
 
 function loadnav2(){
-	return fetch('sidebar/navlist2.html')
-	.then(res=>res.text())
+	return fetch('sidebar/navlist2.html').then(res=>res.text())
 	.then(html=>{document.getElementById('nav-container').innerHTML = html;})
 	.then(()=>{resizenav2(); main_nav_active=false;	})
 	
@@ -117,6 +129,7 @@ function resizenav2(){
 function markActivePage(event){
 	old_active_page = new_active_page;
 	new_active_page = event.currentTarget;
+	active_page =event.currentTarget;
 
 	new_active_page.style.backgroundColor = '#84FF6F';
 	new_active_page.style.color = 'black';
