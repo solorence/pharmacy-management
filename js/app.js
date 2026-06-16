@@ -87,13 +87,14 @@ function activestatenav1(){
 	let now_active = document.getElementById(new_active_page.id);
 	now_active.style.backgroundColor='#84FF6F';
 	now_active.style.color = 'black';
+	new_active_page = now_active;
+
 }
 
 function activestatenav2(){
-	console.log('new active in nav2 is '+new_active_page.id);
 	let now_active = document.getElementById(new_active_page.id);
-	console.log('now active in nav2 is '+now_active.id);
-	now_active.style.backgroundColor='red';
+	now_active.style.backgroundColor='#84FF6F';
+	new_active_page = now_active;
 }
 
 
@@ -129,7 +130,6 @@ function resizenav2(){
 function markActivePage(event){
 	old_active_page = new_active_page;
 	new_active_page = event.currentTarget;
-	active_page =event.currentTarget;
 
 	new_active_page.style.backgroundColor = '#84FF6F';
 	new_active_page.style.color = 'black';
