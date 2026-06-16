@@ -51,80 +51,31 @@ function logoclicked(event){
 
 
 function gotohome(event){
-	old_active_page = new_active_page;
-	new_active_page = event.currentTarget;
-
-	new_active_page.style.backgroundColor = '#84FF6F';
-	new_active_page.style.color = 'black';
-
-	if (new_active_page !== old_active_page && old_active_page != undefined) {
-		old_active_page.style.backgroundColor = '#38B000';
-		old_active_page.style.color = 'white';
-	}
-	//window.location.href='index.html';
+	markActivePage(event);	
 	fetch('sidebar/dashboard.html', {cache:'no-store'}).then(res=> res.text()).then(html=>main_c.innerHTML = html);
 }
 
 
 function gotosales(event){
-	old_active_page = new_active_page;
-	new_active_page = event.currentTarget;
-	
-	new_active_page.style.backgroundColor = '#84FF6F';
-	new_active_page.style.color = 'black';
-
-	if (new_active_page !== old_active_page && old_active_page != undefined) {
-		old_active_page.style.backgroundColor = '#38B000';
-		old_active_page.style.color = 'white';
-	}
+	markActivePage(event);
 	fetch('sidebar/sales.html').then(res=>res.text()).then(html=>main_c.innerHTML = html);
 }
 
 
-function gotoinventory(){
-	old_active_page = new_active_page;
-	new_active_page = event.currentTarget;
-
-	new_active_page.style.backgroundColor = '#84FF6F';
-	new_active_page.style.color = 'black';
-
-	if (new_active_page !== old_active_page && old_active_page != undefined) {
-		old_active_page.style.backgroundColor = '#38B000';
-		old_active_page.style.color = 'white';
-	}
-
+function gotoinventory(event){
+	markActivePage(event);
 	fetch('sidebar/inventory.html').then(res=>res.text()).then(html=>main_c.innerHTML = html);
 }
 
 
-function gotopurchase(){
-	old_active_page = new_active_page;
-	new_active_page = event.currentTarget;
-
-	new_active_page.style.backgroundColor = '#84FF6F';
-	new_active_page.style.color = 'black';
-
-	if (new_active_page !== old_active_page && old_active_page != undefined) {
-		old_active_page.style.backgroundColor = '#38B000';
-		old_active_page.style.color = 'white';
-	}
-
+function gotopurchase(event){
+	markActivePage(event);
 	fetch('sidebar/purchase.html').then(res=>res.text()).then(html=>main_c.innerHTML = html);
 }
 
 
-function gotoreports(){
-	old_active_page = new_active_page;
-	new_active_page = event.currentTarget;
-
-	new_active_page.style.backgroundColor = '#84FF6F';
-	new_active_page.style.color = 'black';
-
-	if (new_active_page !== old_active_page && old_active_page != undefined) {
-		old_active_page.style.backgroundColor = '#38B000';
-		old_active_page.style.color = 'white';
-	}
-
+function gotoreports(event){
+	markActivePage(event);
 	fetch('sidebar/reports.html').then(res=>res.text()).then(html=>main_c.innerHTML = html);
 }
 
@@ -160,4 +111,19 @@ function resizenav2(){
 	let nav2 = document.getElementById('nav-container');
 	nav2.style.minWidth='4vw';
 	console.log('resizenav2 called');	
+}
+
+
+function markActivePage(event){
+	old_active_page = new_active_page;
+	new_active_page = event.currentTarget;
+
+	new_active_page.style.backgroundColor = '#84FF6F';
+	new_active_page.style.color = 'black';
+
+	if (new_active_page !== old_active_page && old_active_page != undefined) {
+		old_active_page.style.backgroundColor = '#38B000';
+		old_active_page.style.color = 'white';
+	}
+
 }
