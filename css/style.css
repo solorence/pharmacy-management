@@ -14,6 +14,12 @@
     --main-page-color:#EAF4E9;
 }
 
+ul{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
 
 .body{
     display:flex;
@@ -203,9 +209,127 @@
 
 
 /***************dashboard secntion2 *************/
+.dashboard .section2{
+    display: flex;
+    justify-content:space-between;
+    gap:2%;
+    margin-top:1rem;
+    align-items:flex-start;
+
+}
+
+.dashboard .section2 .recent-sales{
+    flex:2;
+    border-radius:5px;
+    background-color:white;
+}
+
+.dashboard .section2 .recent-sales-header{
+    border-radius:5px 5px 0 0;
+    padding:1%;
+    color:var(--sales);
+    font-size:0.9rem;
+    font-weight:bold;
+}
+
+.dashboard .section2 .low-stock-items-header{
+    border-radius:5px 5px 0 0;
+    padding:2%;
+    background-color:#E6B211;
+    color: black;
+    font-size:0.9rem;
+    font-weight:bold;
+}
+
+.dashboard .section2 .low-stock-items ul {
+    padding:6%;
+    font-size:0.9rem;
+    display:flex;
+    flex-direction:column;
+    gap:1.2rem;
+}
+
+.dashboard .section2 .low-stock-items ul li{
+    display:flex;
+    justify-content:space-between;
+}
+
+
+.dashboard .section2 .low-stock-items{
+    display: flex;
+    flex-direction:column;
+    padding-bottom:1rem;
+}
+
+.dashboard .section2 .low-stock-items .quantity{
+    font-style:italic;
+}
+
+.moderate{
+    background-color: var(--low-stock);
+    padding:0.2rem 1rem;
+    border-radius:20px;
+    font-size:0.7rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:20%;
+    height:2%;
+    color: white;
+}
+
+.critical{
+    background-color: red;
+    padding:0.2rem 0;
+    border-radius:20px;
+    font-size:0.7rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:30%;
+    height:2%;
+    color: white;
+}
+
+.dashboard .section2 .recent-sales-body{
+    padding:1.8%;
+}
+
+.dashboard .section2 .recent-sales p{
+    text-align:center;
+    margin-top:3%;
+    font-size:0.9rem;
+    border-bottom:1px solid;
+    padding:2%;
+}
+
+.dashboard .section2 .recent-sales-header{
+    background-color:rgba(24,135,84,0.2);
+}
+
+.dashboard .section2 .low-stock-items{
+    flex:1;    
+    border-radius:5px;
+    background-color:white;
+}
+
+.dashboard .section2 table {
+    background-color:rgba(24,135,84,0.5);
+    width:100%;
+}
+
+.dashboard .section2 table th {
+    padding:2%;
+    color:var(--sales);
+    font-size:0.8rem;
+    
+}
+
 .dashboard .section2 table tr:first-of-type{
     background-color:;
 }
+
+
 
 
 /************************************************/
