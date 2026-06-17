@@ -182,7 +182,7 @@
     color:white;
 }
 
-.dashboard .section1 .low-stock{
+.dashboard .section1 .low-stock-alert{
     background-color:var(--low-stock);
 }
 
@@ -200,6 +200,15 @@
     width:4%;
     height:100%;
 }
+
+
+/***************dashboard secntion2 *************/
+.dashboard .section2 table tr:first-of-type{
+    background-color:;
+}
+
+
+/************************************************/
 
 
 
